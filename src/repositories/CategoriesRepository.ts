@@ -29,6 +29,11 @@ class CategoriesRepository {
   list(): Category[] {
     return this.categories;
   }
+
+  findByName(name: string): Category {
+    const category = this.categories.find(category => category.name.toUpperCase() === name.toUpperCase());
+    return category;
+  }
 }
 
 export { CategoriesRepository }
