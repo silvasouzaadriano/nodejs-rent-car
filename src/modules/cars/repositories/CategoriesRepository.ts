@@ -25,7 +25,9 @@ class CategoriesRepository implements ICategoriesRepository {
   }
 
   findByName(name: string): Category {
-    const category = this.categories.find(category => category.name.toUpperCase() === name.toUpperCase());
+    const category = this.categories.find(
+      (category) => category.name.toUpperCase() === name.toUpperCase()
+    );
     return category;
   }
 }

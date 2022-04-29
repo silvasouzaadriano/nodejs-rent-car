@@ -21,4 +21,4 @@ categoriesRoutes.get("/", (request, response) => {
   return response.json(listAllCategories);
 })
 
-export { categoriesRoutes }
+export { categoriesRoutes };
