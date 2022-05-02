@@ -1,18 +1,11 @@
-import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
   name: string;
   description: string;
 }
 
-/**
- * [X] - Define type of return
- * [X] - Fix error return
- * [X] - Access repository
- * [X] - Return something(message, object)
- */
-
-class CreateCategoryService {
+class CreateCategoryUseCase {
   constructor(private categoriesRepository: ICategoriesRepository) {}
 
   execute({ name, description }: IRequest): void {
@@ -27,4 +20,4 @@ class CreateCategoryService {
   }
 }
 
-export { CreateCategoryService }
+export { CreateCategoryUseCase }
